@@ -262,7 +262,7 @@ namespace Recurly.Tests
             return response;
         }
 
-        private Recurly.Client GetPagerCountClient()
+        private MockClient GetPagerCountClient()
         {
             var pageResponse = new Mock<IRestResponse>();
             pageResponse.Setup(_ => _.StatusCode).Returns(System.Net.HttpStatusCode.OK);
@@ -275,7 +275,7 @@ namespace Recurly.Tests
                 .Setup(x => x.Execute(It.Is<RestRequest>(r => r.Method == Method.HEAD)))
                 .Returns(pageResponse.Object);
 
-            return new Recurly.Client("myapikey")
+            return new MockClient("myapikey")
             {
                 RestClient = mockIRestClient.Object
             };

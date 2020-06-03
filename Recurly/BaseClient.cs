@@ -148,11 +148,10 @@ namespace Recurly
             // has likely occurred
             if (resp.ErrorException != null)
             {
-                throw new RecurlyError(resp.ErrorMessage);
+                throw Errors.ErrorFactory.Create(resp);
             }
             else if (status < 200 || status >= 300)
             {
-                // Turn web exceptions into Recurly.NetworkErrors
                 if (resp.ErrorException is WebException)
                 {
                     var netError = new Errors.NetworkError(resp.ErrorMessage);
@@ -164,7 +163,7 @@ namespace Recurly
                 {
                     var serializer = Recurly.JsonSerializer.Default;
                     var err = serializer.Deserialize<Errors.ApiErrorWrapper>(resp).Error;
-                    var ex = Errors.Factory.Create(err);
+                    var ex = Errors.ErrorFactory.Create(err);
                     throw ex;
                 }
             }

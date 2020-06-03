@@ -114,6 +114,13 @@ namespace Recurly.Tests
             Assert.Throws<Recurly.RecurlyError>(() => client.GetResource("benjamin", "param1", new DateTime(2020, 01, 01)));
         }
 
+        [Fact]
+        public void WillThrowAnExceptionWhenResponseHasErrorException2()
+        {
+            //var client = this.MockResourceClient(GenericErrorResponse(HttpStatusCode.InternalServerError, "<div>Error</div>", "text/html"));
+            //Assert.Throws<Recurly.Errors.InternalServer>(() => client.GetResource("benjamin", "param1", new DateTime(2020, 01, 01)));
+        }
+
         private Mock<IRestResponse<MyResource>> SuccessResponse(System.Net.HttpStatusCode status)
         {
             var data = new MyResource()
@@ -124,6 +131,7 @@ namespace Recurly.Tests
             response.Setup(_ => _.StatusCode).Returns(status);
             response.Setup(_ => _.Content).Returns("{\"my_string\": \"benjamin\"}");
             response.Setup(_ => _.Headers).Returns(new List<Parameter> { });
+            response.Setup(_ => _.ContentType).Returns("application/json; charset=UTF-8");
             response.Setup(_ => _.Data).Returns(data);
 
             return response;
@@ -135,8 +143,22 @@ namespace Recurly.Tests
             response.Setup(_ => _.StatusCode).Returns(System.Net.HttpStatusCode.Created);
             response.Setup(_ => _.Content).Returns("{\"code\": 123}");
             response.Setup(_ => _.Headers).Returns(new List<Parameter> { });
+            response.Setup(_ => _.ContentType).Returns("application/json; charset=UTF-8");
             response.Setup(_ => _.ErrorException).Returns(new Exception("parsing error"));
             response.Setup(_ => _.ErrorMessage).Returns("parsing error");
+
+            return response;
+        }
+
+        private Mock<IRestResponse<MyResource>> HtmlErrorResponse(System.Net.HttpStatusCode statusCode, System.Exception errorException, string errorMessage)
+        {
+            var response = new Mock<IRestResponse<MyResource>>();
+            response.Setup(_ => _.StatusCode).Returns(statusCode);
+            response.Setup(_ => _.Content).Returns("<html><div>Error</div></html>");
+            response.Setup(_ => _.Headers).Returns(new List<Parameter> { });
+            response.Setup(_ => _.ContentType).Returns("text/html");
+            response.Setup(_ => _.ErrorException).Returns(errorException);
+            response.Setup(_ => _.ErrorMessage).Returns(errorMessage);
 
             return response;
         }
@@ -147,6 +169,7 @@ namespace Recurly.Tests
             response.Setup(_ => _.StatusCode).Returns(System.Net.HttpStatusCode.NotFound);
             response.Setup(_ => _.Content).Returns("{\"error\":{ \"type\": \"not_found\", \"message\": \"MyResource not found\"}}");
             response.Setup(_ => _.Headers).Returns(new List<Parameter> { });
+            response.Setup(_ => _.ContentType).Returns("application/json; charset=UTF-8");
 
             return response;
         }
