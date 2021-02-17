@@ -1,8 +1,97 @@
 # Changelog
 
-## [3.12.0](https://github.com/recurly/recurly-client-dotnet/tree/HEAD)
+## [3.18.0](https://github.com/recurly/recurly-client-dotnet/tree/HEAD)
 
-[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.11.0...HEAD)
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.17.0...HEAD)
+
+**Implemented enhancements:**
+
+- Latest Changes for 2019-10-10 [\#606](https://github.com/recurly/recurly-client-dotnet/pull/606) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.18.0 [\#607](https://github.com/recurly/recurly-client-dotnet/pull/607) ([douglasmiller](https://github.com/douglasmiller))
+
+## [3.17.0](https://github.com/recurly/recurly-client-dotnet/tree/3.17.0) (2020-12-09)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.16.0...3.17.0)
+
+**Implemented enhancements:**
+
+- Latest Changes for 2019-10-10 [\#599](https://github.com/recurly/recurly-client-dotnet/pull/599) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.17.0 [\#600](https://github.com/recurly/recurly-client-dotnet/pull/600) ([douglasmiller](https://github.com/douglasmiller))
+
+## [3.16.0](https://github.com/recurly/recurly-client-dotnet/tree/3.16.0) (2020-11-24)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.15.0...3.16.0)
+
+**Implemented enhancements:**
+
+- Latest Changes for 2019-10-10 \(tax\_identifier / tax\_identifier\_type\) [\#597](https://github.com/recurly/recurly-client-dotnet/pull/597) ([douglasmiller](https://github.com/douglasmiller))
+- Latest Changes for 2019-10-10 [\#594](https://github.com/recurly/recurly-client-dotnet/pull/594) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.16.0 [\#598](https://github.com/recurly/recurly-client-dotnet/pull/598) ([douglasmiller](https://github.com/douglasmiller))
+- Update readme to include memo on headers [\#595](https://github.com/recurly/recurly-client-dotnet/pull/595) ([joannasese](https://github.com/joannasese))
+
+## [3.15.0](https://github.com/recurly/recurly-client-dotnet/tree/3.15.0) (2020-11-06)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.14.0...3.15.0)
+
+**Implemented enhancements:**
+
+- Latest Changes for 2019-10-10 \(Wallet, Item Coupons\) [\#589](https://github.com/recurly/recurly-client-dotnet/pull/589) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.15.0 [\#591](https://github.com/recurly/recurly-client-dotnet/pull/591) ([douglasmiller](https://github.com/douglasmiller))
+- Add test coverage for unknown error types [\#587](https://github.com/recurly/recurly-client-dotnet/pull/587) ([jguidry-recurly](https://github.com/jguidry-recurly))
+
+## [3.14.0](https://github.com/recurly/recurly-client-dotnet/tree/3.14.0) (2020-10-20)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.13.1...3.14.0)
+
+**Implemented enhancements:**
+
+- Mon Oct 19 20:38:52 UTC 2020 Upgrade API version v2019-10-10 [\#585](https://github.com/recurly/recurly-client-dotnet/pull/585) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.14.0 [\#586](https://github.com/recurly/recurly-client-dotnet/pull/586) ([douglasmiller](https://github.com/douglasmiller))
+
+## [3.13.1](https://github.com/recurly/recurly-client-dotnet/tree/3.13.1) (2020-10-08)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.13.0...3.13.1)
+
+**Fixed bugs:**
+
+- Updating client to be compliant with RFC 2616: case-insensitive headers [\#581](https://github.com/recurly/recurly-client-dotnet/pull/581) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.13.1 [\#583](https://github.com/recurly/recurly-client-dotnet/pull/583) ([douglasmiller](https://github.com/douglasmiller))
+
+## [3.13.0](https://github.com/recurly/recurly-client-dotnet/tree/3.13.0) (2020-09-22)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.12.0...3.13.0)
+
+**Implemented enhancements:**
+
+- Latest Changes for 2019-10-10 [\#579](https://github.com/recurly/recurly-client-dotnet/pull/579) ([douglasmiller](https://github.com/douglasmiller))
+- Latest Changes for 2019-10-10 \(Automated Exports, hierarchical errors, additional resource data attributes\) [\#576](https://github.com/recurly/recurly-client-dotnet/pull/576) ([douglasmiller](https://github.com/douglasmiller))
+- Adding hierarchical errors and moving the error factory [\#569](https://github.com/recurly/recurly-client-dotnet/pull/569) ([douglasmiller](https://github.com/douglasmiller))
+
+**Merged pull requests:**
+
+- Release 3.13.0 [\#580](https://github.com/recurly/recurly-client-dotnet/pull/580) ([douglasmiller](https://github.com/douglasmiller))
+
+## [3.12.0](https://github.com/recurly/recurly-client-dotnet/tree/3.12.0) (2020-08-31)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.11.0...3.12.0)
 
 ## Potential Breaking Change Included
 
@@ -193,7 +282,7 @@ See [#512](https://github.com/recurly/recurly-client-dotnet/pull/512) for more i
 
 ## [3.4.0](https://github.com/recurly/recurly-client-dotnet/tree/3.4.0) (2020-02-20)
 
-[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.2.1...3.4.0)
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.3.0...3.4.0)
 
 **Merged pull requests:**
 
@@ -205,13 +294,13 @@ See [#512](https://github.com/recurly/recurly-client-dotnet/pull/512) for more i
 - Fixing error factory bug [\#473](https://github.com/recurly/recurly-client-dotnet/pull/473) ([douglasmiller](https://github.com/douglasmiller))
 - Initial addition of code to support enum types [\#471](https://github.com/recurly/recurly-client-dotnet/pull/471) ([douglasmiller](https://github.com/douglasmiller))
 
-## [3.2.1](https://github.com/recurly/recurly-client-dotnet/tree/3.2.1) (2019-12-12)
-
-[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.3.0...3.2.1)
-
 ## [3.3.0](https://github.com/recurly/recurly-client-dotnet/tree/3.3.0) (2019-12-12)
 
-[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.2.0...3.3.0)
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.2.1...3.3.0)
+
+## [3.2.1](https://github.com/recurly/recurly-client-dotnet/tree/3.2.1) (2019-12-12)
+
+[Full Changelog](https://github.com/recurly/recurly-client-dotnet/compare/3.2.0...3.2.1)
 
 **Implemented enhancements:**
 
