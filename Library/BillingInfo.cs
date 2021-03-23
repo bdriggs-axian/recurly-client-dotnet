@@ -148,6 +148,8 @@ namespace Recurly
         /// </summary>
         public string TaxIdentifierType { get; set; }
 
+        public bool? PrimaryPaymentMethod { get; set; }
+
         private string _cardNumber;
 
         /// <summary>
@@ -382,6 +384,10 @@ namespace Recurly
                         LastFour = reader.ReadElementContentAsString();
                         break;
 
+                    case "primary_payment_method":
+                        PrimaryPaymentMethod = reader.ReadElementContentAsBoolean();
+                        break;
+
                     case "last_two":
                         LastTwo = reader.ReadElementContentAsString();
                         break;
@@ -482,6 +488,8 @@ namespace Recurly
                 xmlWriter.WriteStringIfValid("amazon_region", AmazonRegion);
                 xmlWriter.WriteStringIfValid("tax_identifier", TaxIdentifier);
                 xmlWriter.WriteStringIfValid("tax_identifier_type", TaxIdentifierType);
+                if (PrimaryPaymentMethod.HasValue)
+                  xmlWriter.WriteElementString("primary_payment_method", PrimaryPaymentMethod.Value.AsString());
 
                 if (!IpAddress.IsNullOrEmpty())
                     xmlWriter.WriteElementString("ip_address", IpAddress);

@@ -32,6 +32,7 @@ namespace Recurly.Test
             info.VerificationValue = "321";
             info.ExpirationMonth = DateTime.Now.AddMonths(3).Month;
             info.ExpirationYear = DateTime.Now.AddYears(3).Year;
+            info.PrimaryPaymentMethod = true;
             info.Update();
 
             var get = Accounts.Get(account.AccountCode);
@@ -63,6 +64,7 @@ namespace Recurly.Test
             get.BillingInfo.CardType.Should().Be(info.CardType);
             get.BillingInfo.FirstSix.Should().Be(info.CreditCardNumber.Substring(0, 6));
             get.BillingInfo.LastFour.Should().Be(info.CreditCardNumber.Last(4));
+            Assert.True(get.BillingInfo.PrimaryPaymentMethod);
         }
 
         [RecurlyFact(TestEnvironment.Type.Integration)]
